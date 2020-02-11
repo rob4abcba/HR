@@ -9,7 +9,6 @@ function countingValleys(s) {
         if (character == "D") {
             if (level == 0) { valleys++; console.log("valleys = ", valleys); }
             level--;
-
         } else {
             if (level == 0) { mountains++; console.log("mountains = ", mountains);  }
             level++;
