@@ -7,10 +7,10 @@ const ransomNote = (note, magazine) => {
 
     magazineWords.forEach(word => {
         console.log("word = ", word);
-        console.log("magazineHash[word] = ", magazineHash[word]);
-        if (!magazineHash[word]) magazineHash[word] = 0;
+        console.log("magazineHash["+word+"] = ", magazineHash[word]);
+        if (!magazineHash[word]) { magazineHash[word] = 0; }
         magazineHash[word]++;
-        console.log("magazineHash[word] = ", magazineHash[word]);
+        console.log("magazineHash["+word+"] = ", magazineHash[word]);
     });
 
     const noteWords = note.split(" ");
@@ -19,12 +19,20 @@ const ransomNote = (note, magazine) => {
 
     noteWords.forEach(word => {
         console.log("word = ", word);
-        console.log("magazineHash[word] = ", magazineHash[word]);
+        console.log("magazineHash["+word+"] = ", magazineHash[word]);
         if (magazineHash[word]) {
             magazineHash[word]--;
-            console.log("magazineHash[word] = ", magazineHash[word]);
-            if (magazineHash[word] < 0) possible = false;
-        } else possible = false;
+            console.log("magazineHash["+word+"] = ", magazineHash[word]);
+            if (magazineHash[word] < 0) { 
+                possible = false;
+                console.log("possible = ", possible);
+                return possible;
+            }
+        } else { 
+            possible = false;
+            console.log("possible = ", possible);
+            return possible;
+        }
     });
 
     return possible;
