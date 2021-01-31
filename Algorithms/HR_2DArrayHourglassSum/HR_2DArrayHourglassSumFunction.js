@@ -8,10 +8,11 @@ function hourglassSum(arr) {
             let temp = arr[i+0][j+0] + arr[i+0][j+1] + arr[i+0][j+2] + arr[i+1][j+1] + arr[i+2][j+0] + arr[i+2][j+1] + arr[i+2][j+2];
             console.log("temp = ", temp);
             console.log("max5 = ", max);
-            if (temp > max) {
-                max = temp; // My silly mistake before was having this be "let max = temp"
-                console.log("max4 = ", max);
-            }
+            // if (temp > max) {
+            //     max = temp; // My silly mistake before was having this be "let max = temp"
+            //     console.log("max4 = ", max);
+            // }
+            max = Math.max(max, temp);
             console.log("max3 = ", max);
         }
         console.log("max2 = ", max);
@@ -19,4 +20,12 @@ function hourglassSum(arr) {
     console.log("max1 = ", max);
     return max;
 }
-console.log
+let array2d = [
+    [1,1,1,0,0,0],
+    [0,1,0,0,0,0],
+    [1,1,1,0,0,0],
+    [0,0,2,4,4,0],
+    [0,0,0,2,0,0],
+    [0,0,1,2,4,0]
+]
+console.log(hourglassSum(array2d));
