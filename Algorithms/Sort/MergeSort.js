@@ -9,7 +9,7 @@ function merge(arr1, arr2) {
     
     // Loop until either arr1 or arr2 becomes empty
     while (i < arr1.length && j < arr2.length) {
-        // If the current element of arr1 is lesser than that of arr2, push arr1[i] and increment i         
+        // If the current element of arr1 is less than that of arr2, push arr1[i] and increment i         
         if (arr1[i] < arr2[j]) {
             res.push(arr1[i]);
             i++;
@@ -36,7 +36,7 @@ function mergeSort(arr) {
     // Base case
     if (arr.length <= 1) return arr;
   
-    // Splitting into two halves
+    // Split into two halves
     let mid = Math.floor(arr.length / 2);
     let left = mergeSort(arr.slice(0, mid));
     let right = mergeSort(arr.slice(mid));
