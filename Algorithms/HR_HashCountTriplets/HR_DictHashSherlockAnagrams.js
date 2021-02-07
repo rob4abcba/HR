@@ -32,7 +32,35 @@ function sherlockAnagrams1(s) {
     }
     return count;
 }
-console.log(sherlockAnagrams1('abba'));
-// console.log(sherlockAnagrams1("pizzahutpi"));
+// console.log(sherlockAnagrams1('abba'));
+// console.log(sherlockAnagrams1('ifailuhkqq'));
+// console.log(sherlockAnagrams1('ifaiqq'));
+console.log(sherlockAnagrams1('kkkk'));
+// console.log(sherlockAnagrams1('cdcd'));
 
-
+// function sherlockAnagrams2(s) {
+//     console.log(s);
+//     console.log(s.length);
+//     let count = 0;
+//     // j = Starting index of our sliding window
+//     for (let j = 0; j < s.length; j++) {
+//         let found = {};
+//         // i = Size of our sliding window
+//         for (let i = 1; j+i <= s.length; i++) {
+//             let substr = s.substr(j, i);
+//             console.log(substr);
+//             substr = substr.split('').sort().join('');
+//             console.log(substr);
+//             if(found[substr]){
+//                 count += found[substr];
+//                 found[substr]++;
+//             } else {
+//                 found[substr] = 1;
+//             }
+//             console.log(count);
+//             console.log(found);
+//         }
+//     }
+//     return count;
+// }
+// console.log(sherlockAnagrams2('abba'));
